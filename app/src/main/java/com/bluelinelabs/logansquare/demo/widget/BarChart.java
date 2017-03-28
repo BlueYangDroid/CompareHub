@@ -20,10 +20,10 @@ public class BarChart extends View {
     private static final int SECTION_COUNT = 6;
     private static final int COLUMNS_PER_SECTION = 4;
 
-    private final Section[] mSections = new Section[SECTION_COUNT];
+    private final Paint[] mPaints = new Paint[COLUMNS_PER_SECTION];
     private final Rect mTextBounds = new Rect();
 
-    private final Paint[] mPaints = new Paint[COLUMNS_PER_SECTION];
+    private Section[] mSections = new Section[SECTION_COUNT];
     private TextPaint mTextPaint;
     private int mColumnHeight;
     private int mColumnPadding;
@@ -78,7 +78,9 @@ public class BarChart extends View {
     }
 
     public void setSections(String[] titles) {
-        for (int i = 0; i < titles.length; i++) {
+        int length = titles.length;
+        mSections = new Section[length];
+        for (int i = 0; i < length; i++) {
             mSections[i].title = titles[i];
         }
     }

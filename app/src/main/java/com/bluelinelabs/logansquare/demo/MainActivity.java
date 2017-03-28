@@ -73,7 +73,6 @@ public class MainActivity extends ActionBarActivity {
         mResponsesToSerialize = getResponsesToParse();
 
         mBarChart = (BarChart)findViewById(R.id.bar_chart);
-        mBarChart.setColumnTitles(new String[] {"GSON", "Jackson", "LoganSquare", "FastJson"});
 
         findViewById(R.id.btn_parse_tests).setOnClickListener(new OnClickListener() {
             @Override
@@ -101,6 +100,7 @@ public class MainActivity extends ActionBarActivity {
     private void performParseTests() {
         mBarChart.clear();
         mBarChart.setSections(new String[] {"Parse 150 items", "Parse 60 items", "Parse 20 items", "Parse 7 items", "Parse 2 items"});
+        mBarChart.setColumnTitles(new String[] {"GSON", "Jackson", "LoganSquare", "FastJson"});
 
         Gson gson = new Gson();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -124,6 +124,7 @@ public class MainActivity extends ActionBarActivity {
     private void performParseAssetFiles() {
         mBarChart.clear();
         mBarChart.setSections(new String[] {"Parse 150 items", "Parse 60 items", "Parse 20 items", "Parse 7 items", "Parse 2 items"});
+        mBarChart.setColumnTitles(new String[] {"GSON", "Jackson", "LoganSquare", "FastJson"});
 
         Gson gson = new Gson();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -149,6 +150,7 @@ public class MainActivity extends ActionBarActivity {
     private void performSerializeTests() {
         mBarChart.clear();
         mBarChart.setSections(new String[] {"Serialize 150 items", "Serialize 60 items", "Serialize 20 items", "Serialize 7 items", "Serialize 2 items"});
+        mBarChart.setColumnTitles(new String[] {"GSON", "Jackson", "LoganSquare", "FastJson"});
 
         Gson gson = new Gson();
         ObjectMapper objectMapper = new ObjectMapper();
