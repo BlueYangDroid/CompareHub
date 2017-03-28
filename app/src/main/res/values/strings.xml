@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LoganSquare Demo</string>
+    <string name="value_prop">Welcome to the demo of LoganSquare</string>
+    <string name="parse_benchmark">Parse</string>
+    <string name="parse_asset">Parse Asset</string>
+    <string name="serialize_benchmark">Serialize</string>
+
+</resources>
