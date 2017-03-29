@@ -17,7 +17,7 @@ import java.util.List;
 /** Hacked together barchart view for this demo. Please do not take this as an example of a good way to do things. */
 public class BarChart extends View {
 
-    private static final int SECTION_COUNT = 6;
+    private static int SECTION_COUNT = 6;
     private static final int COLUMNS_PER_SECTION = 4;
 
     private final Paint[] mPaints = new Paint[COLUMNS_PER_SECTION];
@@ -79,8 +79,10 @@ public class BarChart extends View {
 
     public void setSections(String[] titles) {
         int length = titles.length;
+        SECTION_COUNT = length;
         mSections = new Section[length];
         for (int i = 0; i < length; i++) {
+            mSections[i] = new Section();
             mSections[i].title = titles[i];
         }
     }
